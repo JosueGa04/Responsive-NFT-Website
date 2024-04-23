@@ -28,7 +28,7 @@ nav a {
 }
 
 body{
-    background-color: #f1f1f1;
+    background-color: #ffffff;
 }
 
 nav{
@@ -174,14 +174,11 @@ h2.separator{
 }
 
 .container {
-    width: 800px;
-    height: 800px;
-    position: relative;
+    width: 800px; /* Ajusta esto al tamaño de tu SVG */
+    height: 800px; /* Ajusta esto al tamaño de tu SVG */
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
 #donut {
     position: absolute;
     font-size: 80px;
@@ -201,9 +198,9 @@ svg {
     to {
       stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a1) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a1) / 100));
     }
-  }
-  
-  @keyframes percent2 {
+}
+
+@keyframes percent2 {
     to {
       stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a2) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a2) / 100));
     }
@@ -305,6 +302,14 @@ svg {
 
 .donut:hover {
     stroke-width: 100;
+}
+
+.donut.selected {
+    stroke-width: 100px;
+}
+
+.donut.unselected {
+    opacity: 0.3;
 }
 
 .nft-shop{
