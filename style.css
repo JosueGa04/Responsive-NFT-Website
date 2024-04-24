@@ -10,6 +10,7 @@
     --a7: 5;
     --a8: 5;
     --a9: 15;
+    --radio: 250px;
 }
 
 *{
@@ -174,11 +175,11 @@ h2.separator{
 }
 
 .container {
-    width: 800px; /* Ajusta esto al tamaño de tu SVG */
-    height: 800px; /* Ajusta esto al tamaño de tu SVG */
-    margin: auto;
-    display: flex;
+    width: 100%;
+    max-width: 800px; /* Asegúrate de que el SVG no sea más grande que su tamaño original */
+    margin: 0 auto; /* Centra el SVG horizontalmente */
 }
+
 #donut {
     position: absolute;
     font-size: 80px;
@@ -194,57 +195,64 @@ svg {
     align-items: center;
 }
 
+svg text {
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+
+}
+
 @keyframes percent1 {
     to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a1) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a1) / 100));
+      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a1) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a1) / 100));
     }
 }
 
 @keyframes percent2 {
     to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a2) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a2) / 100));
+      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a2) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a2) / 100));
     }
-  }
-  
-  @keyframes percent3 {
+}
+
+@keyframes percent3 {
     to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a3) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a3) / 100));
+      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a3) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a3) / 100));
     }
-  }
-  
+}
+
 @keyframes percent4 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a4) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a4) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a4) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a4) / 100));
     }
 }
 
 @keyframes percent5 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a5) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a5) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a5) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a5) / 100));
     }
 }
 
 @keyframes percent6 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a6) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a6) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a6) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a6) / 100));
     }
 }
 
 @keyframes percent7 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a7) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a7) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a7) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a7) / 100));
     }
 }
 
 @keyframes percent8 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a8) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a8) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a8) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a8) / 100));
     }
 }
 
 @keyframes percent9 {
     to {
-        stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a9) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a9) / 100));
+        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a9) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a9) / 100));
     }
 }
 
@@ -278,12 +286,12 @@ svg {
 .donut:nth-child(5) {
     transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100)));
     animation: percent5 1s ease-in-out forwards;
-  }
-  
-  .donut:nth-child(6) {
+}
+
+.donut:nth-child(6) {
     transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100)));
     animation: percent6 1s ease-in-out forwards;
-  }
+}
 
 .donut:nth-child(7) {
     transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100)));
@@ -293,9 +301,9 @@ svg {
 .donut:nth-child(8) {
     transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100) + calc(var(--a7) * 360deg / 100)));
     animation: percent8 1s ease-in-out forwards;
-  }
+}
 
-  .donut:nth-child(9) {
+.donut:nth-child(9) {
     transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100) + calc(var(--a7) * 360deg / 100) + calc(var(--a8) * 360deg / 100)));
     animation: percent9 1s ease-in-out forwards;
 }
@@ -320,6 +328,8 @@ svg {
 .nft-shop .category{
     display: flex;
     gap: 14px;
+    text-align: center;
+
 }
 
 .nft-shop .category a{

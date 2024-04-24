@@ -1,3 +1,4 @@
+// Código existente
 document.querySelectorAll('.donut').forEach(function(donut) {
     donut.addEventListener('click', function(event) {
         event.stopPropagation(); // Evita que el evento de clic se propague al documento
@@ -24,3 +25,23 @@ document.querySelectorAll('.donut').forEach(function(donut) {
         }
     });
 });
+
+// Nueva funcionalidad
+document.querySelectorAll('.category a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita que el enlace navegue a su href
+
+        // Obtén la categoría del enlace en el que se hizo clic
+        var category = link.getAttribute('data-category');
+
+        // Agrega la clase 'unselected' a todos los segmentos
+        document.querySelectorAll('.donut').forEach(function(donut) {
+            donut.classList.add('unselected');
+        });
+
+        // Encuentra el segmento que corresponde a la categoría y elimina las clases 'selected' y 'unselected'
+        var donut = document.querySelector('.donut[data-category="' + category + '"]');
+        donut.classList.remove('selected', 'unselected');
+    });
+});
+
