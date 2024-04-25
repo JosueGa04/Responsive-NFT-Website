@@ -174,150 +174,44 @@ h2.separator{
     padding: 0 4px;
 }
 
-.container {
-    width: 100%;
-    max-width: 800px; /* Asegúrate de que el SVG no sea más grande que su tamaño original */
-    margin: 0 auto; /* Centra el SVG horizontalmente */
+path {
+    cursor: pointer;
 }
 
-#donut {
-    position: absolute;
-    font-size: 80px;
-    font-weight: 800;
-    color: white;
-}
-
-svg {
-    width: 100%;
-    height: 100%;
+form {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto
+}
+
+input {
+    border: 1px dotted;
+    width: 50%;
+}
+
+#pieChart {
+    /* border: red 1px dotted; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto
+}
+
+.text-container {
+    /* border: 1px dotted; */
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-svg text {
-    font-size: 50px;
-    font-weight: 800;
-    color: white;
-
-}
-
-@keyframes percent1 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a1) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a1) / 100));
-    }
-}
-
-@keyframes percent2 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a2) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a2) / 100));
-    }
-}
-
-@keyframes percent3 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a3) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a3) / 100));
-    }
-}
-
-@keyframes percent4 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a4) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a4) / 100));
-    }
-}
-
-@keyframes percent5 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a5) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a5) / 100));
-    }
-}
-
-@keyframes percent6 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a6) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a6) / 100));
-    }
-}
-
-@keyframes percent7 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a7) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a7) / 100));
-    }
-}
-
-@keyframes percent8 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a8) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a8) / 100));
-    }
-}
-
-@keyframes percent9 {
-    to {
-        stroke-dasharray: calc(2 * var(--pi) * var(--radio) * var(--a9) / 100) calc(2 * var(--pi) * var(--radio) * calc(1 - var(--a9) / 100));
-    }
-}
-
-.donut {
-    transform-origin: center center;
-    transition: 0.5s ease-in-out;
-    stroke-dashoffset: 0;
-    cursor: pointer;
-}
-
-.donut:nth-child(1) {
-    transform: rotateZ(-90deg);
-    animation: percent1 1s ease-in-out forwards;
-}
-
-.donut:nth-child(2) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100)));
-    animation: percent2 1s ease-in-out forwards;
-}
-
-.donut:nth-child(3) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100)));
-    animation: percent3 1s ease-in-out forwards;
-}
-
-.donut:nth-child(4) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100)));
-    animation: percent4 1s ease-in-out forwards;
-}
-
-.donut:nth-child(5) {
-    transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100)));
-    animation: percent5 1s ease-in-out forwards;
-}
-
-.donut:nth-child(6) {
-    transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100)));
-    animation: percent6 1s ease-in-out forwards;
-}
-
-.donut:nth-child(7) {
-    transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100)));
-    animation: percent7 1s ease-in-out forwards;
-}
-
-.donut:nth-child(8) {
-    transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100) + calc(var(--a7) * 360deg / 100)));
-    animation: percent8 1s ease-in-out forwards;
-}
-
-.donut:nth-child(9) {
-    transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100) + calc(var(--a4) * 360deg / 100) + calc(var(--a5) * 360deg / 100) + calc(var(--a6) * 360deg / 100) + calc(var(--a7) * 360deg / 100) + calc(var(--a8) * 360deg / 100)));
-    animation: percent9 1s ease-in-out forwards;
-}
-
-.donut:hover {
-    stroke-width: 100;
-}
-
-.donut.selected {
-    stroke-width: 100px;
-}
-
-.donut.unselected {
-    opacity: 0.3;
+#segmentText {
+    width: 100%;
+    padding: 20px;
+    text-align: centre;
 }
 
 .nft-shop{

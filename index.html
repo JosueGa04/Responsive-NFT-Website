@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     
     <title>Responsive NFT Website</title>
@@ -62,21 +63,15 @@
 
     
     <div class="container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800">
-            <circle cx="400" cy="400" class="donut" data-category="text" r="250" stroke-width="80" stroke="#ff8c69" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="image" r="250" stroke-width="80" stroke="#ffff00" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="data" r="250" stroke-width="80" stroke="#008000" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="code" r="250" stroke-width="80" stroke="#87CEFA" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="music" r="250" stroke-width="80" stroke="#FF69B4" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="video" r="250" stroke-width="80" stroke="#9400D3" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="game" r="250" stroke-width="80" stroke="#FFD700" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="vector" r="250" stroke-width="80" stroke="#0000FF" fill="none"/>
-            <circle cx="400" cy="400" class="donut" data-category="tivsm" r="250" stroke-width="80" stroke="#FF0000" fill="none"/>
-            <text x="400" y="400" text-anchor="middle" dominant-baseline="middle">
-                GEN AI MAP
-            </text>
-        </svg>
+        <div class="row">
+            <div class="col-sm-6" id="pieChart"></div>
+            <div id="pieText" class="col-sm-6 text-container">
+                <h1 id="segmentTitle">Select Segment</h1>
+                <p id="segmentText">Lots of text...</p>
+            </div>
+        </div>
     </div>
+
     
 
     <h2 class="separator">
@@ -221,6 +216,9 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 
 </body>
