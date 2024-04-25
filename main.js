@@ -1,11 +1,13 @@
 var data_V1 = [{
     "Program": "Text",
     "Percentage": 65,
-    "Description": "JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive."
+    "Description": "JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.",
+    "Elements": ["ChatGPT", "Notion.AI", "Llama"]
 }, {
     "Program": "Image",
     "Percentage": 55,
-    "Description": "CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once."
+    "Description": "CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.",
+    "Elements": ["Photoshop", "GIMP", "Illustrator"]
 }, {
     "Program": "Data Simulation",
     "Percentage": 48,
@@ -19,6 +21,21 @@ var data_V1 = [{
     "Percentage": 33,
     "Description": "Bla bla bla"
 }];
+
+var elementData = {
+    "ChatGPT": {
+        "Description": "ChatGPT es un modelo de lenguaje AI desarrollado por OpenAI.",
+        // Más propiedades aquí...
+    },
+    "Notion.AI": {
+        "Description": "Notion.AI es una herramienta de productividad impulsada por AI.",
+        // Más propiedades aquí...
+    },
+    "Photoshop": {
+        "Description": "Photoshop es un software de edición de imágenes desarrollado por Adobe.",
+        // Más propiedades aquí...
+    },
+};
 
 var width = parseInt(d3.select('#pieChart').style('width'), 10);
 var height = width;
@@ -74,23 +91,40 @@ var svg = d3.select("#pieChart").append("svg")
     .append("g")
     .attr("transform", "translate(" + radius + "," + height / 2 + ")");
 
+// Crea los segmentos de la dona
 var g = svg.selectAll("path")
     .data(pie(data_V1))
     .enter().append("path")
     .style("fill", function(d) {
-    return color(d.data.Program);
+        return color(d.data.Program);
     })
     .attr("d", arc)
     .style("fill", function(d) {
-    return color(d.data.Program);
+        return color(d.data.Program);
     })
     .on("click", function(d) {
-    change(d, this);
-    $('.text-container').hide();
-    $('#segmentTitle').replaceWith('<h1 id="segmentTitle">' + d.data.Program + ": " + d.data.Percentage + '%</h1>');
-    $('#')
-    $('#segmentText').replaceWith('<p id="segmentText">' + d.data.Description + '</p>');
-    $('.text-container').fadeIn(400);
+        change(d, this);
+        $('.text-container').hide();
+        $('#segmentTitle').replaceWith('<h1 id="segmentTitle">' + d.data.Program + ": " + d.data.Percentage + '%</h1>');
+        $('#segmentText').replaceWith('<p id="segmentText">' + d.data.Description + '</p>');
+    
+        // Crea un elemento de texto para cada elemento en la lista
+        var elementsHtml = d.data.Elements.map(function(element) {
+            return '<span class="element" style="cursor: pointer;">' + element + '</span>';
+        }).join(', ');
+        $('#segmentElements').replaceWith('<p id="segmentElements">Top AIs: ' + elementsHtml + '</p>');
+    
+        $('.text-container').fadeIn(400);
+    
+        // Agrega un controlador de eventos de clic a cada elemento
+        $('.element').on('click', function() {
+            // Muestra información específica sobre el elemento cuando se hace clic en él
+            var element = $(this).text();
+            var elementInfo = elementData[element];
+            $('#elementTitle').replaceWith('<h2 id="elementTitle">' + element + '</h2>');
+            $('#elementDescription').replaceWith('<p id="elementDescription">' + elementInfo.Description + '</p>');
+        });
     });
+
 
 document.querySelector('style').textContent += '@media(max-width:767px) {#pieChart { transform: rotate(90deg); transform-origin: 50% 50%; transition: 1s; max-width: 50%; } .text-container { width: 100%; min-height: 0; }} @media(min-width:768px) {#pieChart { transition: 1s;}}'
