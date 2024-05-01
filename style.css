@@ -190,6 +190,12 @@ input {
     width: 50%;
 }
 
+.hidden {
+    display: none;
+}
+
+
+
 #pieChart {
     /* border: red 1px dotted; */
     
@@ -208,10 +214,63 @@ input {
     align-items: center;
 }
 
+.element-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.element-button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    transition: all 0.8s ease;
+}
+
+#elementTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#elementImage {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+#elementVideo {
+    max-width: 100%;
+    height: auto;
+}
+
+#elementWebsite {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
 #segmentText {
     width: 100%;
     padding: 20px;
-    text-align: centre;
+    font-size: medium;
+}
+
+#segmentElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .nft-shop{
@@ -311,27 +370,6 @@ input {
 .nft-shop .nft-list .item .bid a:hover{
     color: #fff;
     background-color: #000;
-}
-
-.view-more{
-    margin: 10px 0 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.view-more button{
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background: #dfdcdc;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.view-more button:hover{
-    color: #fff;
-    background: #0f2182;
 }
 
 .sellers{
