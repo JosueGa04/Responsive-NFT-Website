@@ -1,29 +1,33 @@
 var data_V1 = [{
     "Program": "Text",
-    "Percentage": 65,
+    "Percentage": 50,
     "Description": "These AI models, such as GPT (Generative Pre-trained Transformer), utilize vast amounts of data to understand and replicate human language patterns, enabling them to produce coherent and contextually relevant text across various domains. From generating creative stories and poetry to assisting in customer service interactions and writing code snippets, AI text generation has become ubiquitous.",
     "Elements": ["ChatGPT", "Notion.AI", "Llama", "GPT-3", "GPT-4", "GPT-5"]
 }, {
     "Program": "Image",
-    "Percentage": 55,
+    "Percentage": 50,
     "Description": "CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.",
     "Elements": ["Photoshop", "GIMP", "Illustrator"]
 }, {
     "Program": "Data Simulation",
-    "Percentage": 48,
-    "Description": "Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis."
+    "Percentage": 50,
+    "Description": "Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.",
+    "Elements": ["Python"]
 }, {
     "Program": "Code Generator Review",
-    "Percentage": 47,
-    "Description": "SQL (Structured Query Language) is a standardized programming language that's used to manage relational databases and perform various operations on the data in them."
+    "Percentage": 50,
+    "Description": "SQL (Structured Query Language) is a standardized programming language that's used to manage relational databases and perform various operations on the data in them.",
+    "Elements": ["SQL"]
 }, {
     "Program": "Music & Sound",
-    "Percentage": 33,
-    "Description": "Bla bla bla"
+    "Percentage": 50,
+    "Description": "Bla bla bla",
+    "Elements": ["Ableton Live", "FL Studio", "Audacity"]
 }];
 
 var elementData = {
     "ChatGPT": {
+        "IdTool": 1001,
         "Description": "ChatGPT es un modelo de lenguaje AI desarrollado por OpenAI.",
         "Image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
         "Website": "https://chat.openai.com/",
