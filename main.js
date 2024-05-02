@@ -6,27 +6,48 @@ var data_V1 = [{
 }, {
     "Program": "Image",
     "Percentage": 50,
-    "Description": "CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.",
+    "Description": "AI-driven image generation has reshaped the visual landscape, offering the ability to create realistic and diverse images across a spectrum of styles and subjects. Utilizing deep learning techniques, these systems analyze vast datasets to understand and replicate visual patterns, resulting in striking and sometimes surreal imagery. While ethical considerations and potential biases require careful navigation, the potential for AI-generated images to inspire creativity, streamline design processes, and even assist in scientific exploration is immense, heralding a new era of visual expression and innovation.",
     "Elements": ["Photoshop", "GIMP", "Illustrator"]
 }, {
     "Program": "Data Simulation",
     "Percentage": 50,
-    "Description": "Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.",
+    "Description": " AI-driven data simulation has emerged as a powerful tool for generating synthetic datasets that mimic real-world scenarios with remarkable accuracy. Leveraging machine learning algorithms, these simulations can replicate complex systems and behaviors, enabling researchers and practitioners to explore hypothetical scenarios, test algorithms, and train AI models in controlled environments. By generating diverse and representative datasets, AI data simulation not only accelerates research and development but also addresses privacy concerns associated with real data",
     "Elements": ["Python"]
 }, {
     "Program": "Code Generator Review",
     "Percentage": 50,
-    "Description": "SQL (Structured Query Language) is a standardized programming language that's used to manage relational databases and perform various operations on the data in them.",
+    "Description": "The AI-driven code generator represents a groundbreaking advancement in software development, offering developers a powerful tool to streamline coding processes and boost productivity. By leveraging deep learning algorithms, this innovative technology can swiftly generate high-quality code snippets tailored to specific tasks and programming languages. Its intuitive interface and user-friendly design make it accessible to developers of all skill levels, enabling rapid prototyping and iteration. Additionally, the code generator's ability to learn from vast repositories of code ensures that it produces efficient and reliable solutions, saving developers valuable time and effort.",
     "Elements": ["SQL"]
 }, {
     "Program": "Music & Sound",
     "Percentage": 50,
-    "Description": "Bla bla bla",
+    "Description": "AI-driven music and sound generation have revolutionized the creative process, offering musicians, composers, and sound designers innovative tools to explore new sonic landscapes. By leveraging machine learning algorithms, these systems can analyze vast musical datasets and understand intricate patterns, resulting in the creation of captivating melodies, harmonies, and rhythms. The ability to generate music in various styles and genres empowers artists to experiment and push the boundaries of their creativity, while also providing inspiration for new compositions. Moreover, AI-driven sound generation can produce immersive audio experiences for various applications, from video games and virtual reality to film and advertising.",
     "Elements": ["Ableton Live", "FL Studio", "Audacity"]
+}, {
+    "Program": "Video",
+    "Percentage": 50,
+    "Description": " AI-driven video generation has unlocked unprecedented possibilities for visual storytelling, offering creators innovative tools to bring their ideas to life. By harnessing deep learning algorithms, these systems can analyze vast repositories of video content to understand visual patterns and styles, enabling the generation of compelling and dynamic video sequences. Whether it's generating realistic animations, enhancing video quality, or automating editing tasks, AI-driven video generation streamlines the production process and empowers filmmakers, content creators, and marketers to realize their vision more efficiently. Moreover, AI-generated video content can be customized to suit specific preferences and target audiences, enhancing engagement and driving viewer interaction.",
+    "Elements": ["Premiere Pro", "Final Cut Pro", "DaVinci Resolve"]
+}, {
+    "Program": "Game & Virtual Reality",
+    "Percentage": 50,
+    "Description": "AI-driven game and virtual reality (VR) experiences have propelled interactive entertainment to new heights, offering immersive and dynamic worlds that captivate players like never before. By leveraging advanced algorithms, these systems can generate lifelike environments, intelligent non-player characters (NPCs), and engaging gameplay mechanics, enhancing the overall gaming experience. AI-driven game development streamlines the design process, enabling developers to create complex worlds and scenarios more efficiently while maintaining high levels of realism and interactivity. Additionally, AI-powered NPCs can adapt to player actions, providing challenging and unpredictable gameplay experiences that keep players engaged. In the realm of virtual reality, AI algorithms enhance immersion by generating realistic environments, simulating natural interactions, and even personalizing experiences based on user preferences.",
+    "Elements": ["Unity", "Unreal Engine", "Blender"]
+}, {
+    "Program": "Vector Database",
+    "Percentage": 50,
+    "Description": "AI-driven vector databases have revolutionized data storage and retrieval, offering a highly efficient and scalable solution for organizing and accessing vast amounts of vector-based information. By utilizing advanced machine learning algorithms, these databases can efficiently index and search through high-dimensional vector representations, enabling rapid retrieval of relevant data points. This technology is particularly valuable in applications such as image recognition, natural language processing, and recommendation systems, where data is often represented as vectors in high-dimensional spaces. AI-driven vector databases empower researchers, engineers, and data scientists to perform complex analyses and extract valuable insights from large datasets with unprecedented speed and accuracy.",
+    "Elements": ["MongoDB", "MySQL", "PostgreSQL"]
+}, {
+    "Program": "Text, Image, Video, Speech & More",
+    "Percentage": 50,
+    "Description": "AI-powered platforms seamlessly integrate text, image, video, speech, and more, revolutionizing content creation, analysis, and interaction. Leveraging advanced algorithms, these platforms empower users to automate tasks, streamline workflows, and unlock new possibilities for creativity and innovation across various industries. From generating coherent text to creating realistic images and videos, transcribing speech, and understanding natural language, AI-driven platforms offer a comprehensive toolkit for communication and decision-making, driving transformative change worldwide.",
+    "Elements": ["TensorFlow", "PyTorch", "Keras"]
 }];
 
 var elementData = {
     "ChatGPT": {
+        "toolName" : "ChatGPT",
         "IdTool": 1001,
         "Description": "ChatGPT es un modelo de lenguaje AI desarrollado por OpenAI.",
         "Image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
